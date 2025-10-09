@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #ffffff; 
+    --secondary-color: #999999; 
+    --background-color: #000000;
+    --highlight-color: #ffd700; 
+    --font-family: 'Inter', sans-serif; 
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header/Navigation Styling */
+.navbar {
+    width: 100%;
+    padding: 20px 50px; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbar nav a:hover {
+    border-color: var(--primary-color);
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    flex-grow: 1; 
+}
+
+.content-left {
+    max-width: 60%;
+    line-height: 1.2;
+}
+
+.content-left h1 {
+    font-size: 3.5rem; 
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.content-left p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-top: 20px;
+    max-width: 80%;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+
+.content-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.background-text {
+    position: absolute;
+    font-size: 10rem; 
+    color: rgba(255, 255, 255, 0.08); 
+    letter-spacing: 5px;
+    font-weight: 900;
+    z-index: 0; 
+    right: 0;
+    transform: translateY(-50%); 
+    pointer-events: none; 
+}
+
+.profile-image-container {
+    position: relative;
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary-color); 
+    z-index: 1; 
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .content-left, .content-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .content-right {
+        order: -1; 
+        margin-bottom: 30px;
+    }
+
+    .background-text {
+        font-size: 6rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .content-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* About Me Page Styling */
+.about-section {
+    padding: 80px 100px;
+    line-height: 1.8;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.education {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.education pre {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 50px;
+}
+
+.skill span {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
