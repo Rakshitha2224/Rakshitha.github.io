@@ -187,7 +187,6 @@ body {
 .about-section {
     padding: 50px;
     max-width: 1000px;
-    /* Aligns the 1000px content block to the left, 50px from the screen edge */
     margin: 0 auto 0 50px; 
 }
 
@@ -196,16 +195,13 @@ body {
     color: var(--highlight-color);
     font-size: 2.2rem;
     margin-bottom: 20px;
-    /* Ensure all headings are left-aligned */
     text-align: left;
     font-weight: 700;
-    /* Initial state for animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
 }
 
-/* Staggering the main H2 */
 .about-section h2:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -214,9 +210,7 @@ body {
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--secondary-color);
-    /* Ensure all paragraphs are left-aligned */
     text-align: left;
-    /* Initial state for animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
@@ -230,12 +224,10 @@ body {
 
 .education {
     padding: 0;
-    /* Removed box styling */
-    /* Initial state for animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.7s; /* Delay after H2 (0.5s) */
+    animation-delay: 0.7s; 
 }
 
 .education pre {
@@ -247,12 +239,10 @@ body {
     line-height: 1.8;
 }
 
-/* Staggering the Education H2 (which is the 4th child) */
 .about-section h2:nth-child(4) {
     animation-delay: 0.5s;
 }
 
-/* Staggering the Skills H2 (which is the 7th child) */
 .about-section h2:nth-child(7) {
     animation-delay: 0.9s;
 }
@@ -261,7 +251,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* Aligns the skill chips to the center */
     justify-content: center;
     margin-top: 15px;
 }
@@ -269,14 +258,13 @@ body {
 .skill {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keep icons/text centered within the chip for aesthetics */
+    align-items: center; 
     padding: 15px 25px;
     border: 2px solid var(--highlight-color);
     border-radius: 50px;
     background-color: rgba(255, 215, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s;
-    /* Use popIn for individual skills with stagger */
-    opacity: 0; /* Required for popIn to work */
+    opacity: 0; 
     animation: popIn 0.5s ease forwards;
 }
 
@@ -304,7 +292,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Specific icon colors for Devicons/Font Awesome (if needed) */
 .devicon-java-plain.colored { color: #f89820; }
 .devicon-python-plain.colored { color: #306998; }
 .devicon-html5-plain.colored { color: #e34f26; }
